@@ -1,0 +1,40 @@
+pid 8865 forked, i=0, ppid 710-
+pid 8865 forked, i=1, ppid 710-
+pid 8869 forked, i=2, ppid 8865-
+pid 8869 wait
+pid 8869 teminated
+pid 8866 forked, i=0, ppid 8865-
+pid 8866 forked, i=1, ppid 8865-
+pid 8870 forked, i=2, ppid 8866-
+pid 8870 wait
+pid 8870 teminated
+pid 8866 forked, i=0, ppid 8865-
+pid 8868 forked, i=1, ppid 8866-
+pid 8871 forked, i=2, ppid 8868-
+pid 8871 wait
+pid 8871 teminated
+pid 8866 forked, i=0, ppid 8865-
+pid 8868 forked, i=1, ppid 8866-
+pid 8868 forked, i=2, ppid 8866-
+pid 8868 wait
+pid 8868 teminated
+pid 8866 forked, i=0, ppid 8865-
+pid 8866 forked, i=1, ppid 8865-
+pid 8866 forked, i=2, ppid 8865-
+pid 8866 wait
+pid 8866 teminated
+pid 8865 forked, i=0, ppid 710-
+pid 8867 forked, i=1, ppid 8865-
+pid 8872 forked, i=2, ppid 8867-
+pid 8872 wait
+pid 8872 teminated
+pid 8865 forked, i=0, ppid 710-
+pid 8867 forked, i=1, ppid 8865-
+pid 8867 forked, i=2, ppid 8865-
+pid 8867 wait
+pid 8867 teminated
+pid 8865 forked, i=0, ppid 710-
+pid 8865 forked, i=1, ppid 710-
+pid 8865 forked, i=2, ppid 710-
+pid 8865 wait
+pid 8865 teminated

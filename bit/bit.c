@@ -1,7 +1,8 @@
 #include <stdint.h>
 #include <stdio.h>
 
-uint32_t func(uint32_t x) {
+uint32_t func(uint32_t x)
+{
     uint32_t n = x;
     n = ((n & 0xffff0000) >> 16) | ((n & 0x0000ffff) << 16);
     n = ((n & 0xff00ff00) >>  8) | ((n & 0x00ff00ff) <<  8);
@@ -15,8 +16,7 @@ uint32_t inverse32oldFasion(uint32_t x)
 {
     uint32_t n = 0;
 
-    for (int i = 0; i < 31 ; i++)
-    {
+    for (int i = 0; i < 31 ; i++) {
         n |= x & 0x1;
         x >>= 1;
         n <<= 1;
@@ -29,8 +29,7 @@ uint16_t inverse16oldFasion(uint16_t x)
 {
     uint16_t n = 0;
 
-    for (int i = 0; i < 15 ; i++)
-    {
+    for (int i = 0; i < 15 ; i++) {
         n |= x & 0x1;
         x >>= 1;
         n <<= 1;
@@ -45,13 +44,12 @@ uint32_t inverse32(uint32_t x)
     uint32_t mask1[5] = {0xffff0000, 0xff00ff00, 0xf0f0f0f0, 0xcccccccc, 0xaaaaaaaa};
     uint32_t mask2[5] = {0x0000ffff, 0x00ff00ff, 0x0f0f0f0f, 0x33333333, 0x55555555};
 
-    for(int i = 0; i < 5; i++)
-    {
- //       printf("inverse32: %08x +\n", n);
+    for(int i = 0; i < 5; i++) {
+//       printf("inverse32: %08x +\n", n);
         n = ((n & mask1[i]) >> (16>>i)) | ((n & mask2[i]) << (16>>i));
- //       printf("inverse32: %08x - \n", n);
+//       printf("inverse32: %08x - \n", n);
     }
-    
+
     return n;
 }
 
@@ -61,8 +59,7 @@ uint16_t inverse16(uint16_t x)
     uint16_t mask1[5] = {0xff00, 0xf0f0, 0xcccc, 0xaaaa};
     uint16_t mask2[5] = {0x00ff, 0x0f0f, 0x3333, 0x5555};
 
-    for(int i = 0; i < 4; i++)
-    {
+    for(int i = 0; i < 4; i++) {
 //        printf("inverse16: %04x +\n", n);
         n = ((n & mask1[i]) >> (8>>i)) | ((n & mask2[i]) << (8>>i));
 //        printf("inverse16: %04x - \n", n);
